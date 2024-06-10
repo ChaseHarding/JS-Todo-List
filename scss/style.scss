@@ -1,27 +1,61 @@
-@include 'buttons'
+@use 'buttons';
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
 
     .container {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        text-align: center;
 
         h1 {
-
+            margin-bottom: 1rem;
             form{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
 
                 input{
-
+                    padding: 0.5rem;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
                 }
 
                 button {
-
+                    @extend buttons.primary;
                 }
 
             }
 
             ul {
+                list-style-type: none;
+                padding: 0;
 
                 li {
+                    background: #f9f9f9;
+                    padding: 0.5rem;
+                    border-bottom: 1px solid #ddd;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
 
+                    &.completed {
+                        text-decoration: line-through;
+                        color: #999;
+                    }
+
+                    button {
+                        @extend buttons.complete
+                    }
 
                 }
             }
