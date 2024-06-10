@@ -31,7 +31,7 @@ body {
                 }
 
                 button {
-                    @extend buttons.primary;
+                   @include buttons.button-styles(#007BFF, #0056b3)
                 }
 
             }
@@ -47,6 +47,7 @@ body {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    
 
                     &.completed {
                         text-decoration: line-through;
@@ -54,7 +55,7 @@ body {
                     }
 
                     button {
-                        @extend buttons.complete
+                        @include buttons.button-styles(none, none, #007BFF)
                     }
 
                 }

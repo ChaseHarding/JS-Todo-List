@@ -20,8 +20,10 @@
 }
 
 .complete {
-    @include button-styles(none, none, #007BFF);
+    background: none;
     color: #007BFF;
+    border: none;
+    cursor: pointer;
 
     &:hover {
         color: #0056b3

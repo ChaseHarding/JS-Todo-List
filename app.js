@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // function for adding new todo items
     function addTodoItem(e) {
         e.preventDefault(); //preventing default page reloading
-
+        console.log(addTodoItem)
         const taskText = todoInput.value.trim(); //trim will remove any extra spaces or line breaks the user may accidently include
         
         if(taskText !== '') {
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
               // append the complete button to the todo item
             li.appendChild(completeButton)//appending the complete button to the li
             todoList.appendChild(li);//appending the li to the todo list
-
+            console.log(todoList)
             todoInput.value = '';
         }
     }
