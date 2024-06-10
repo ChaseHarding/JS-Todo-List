@@ -1,29 +1,29 @@
-button {
+@mixin button-styles($bg-color, $hover-color, $text-color: white) {
     padding: 0.5rem;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    background-color: $bg-color;
+    color: $text-color;
 
-    &.primary {
-        background-color: #007BFF;
-        color: white;
-
-        &:hover {
-            background-color: #0056b3;
-        }
+    &:hover {
+        background-color: $hover-color;
     }
+}
 
-    &.secondary {
-        background-color: #6c757d;
-        color: white;
+.primary {
+    @include button-styles(#007BFF, #0056b3)
+}
 
-        &.hover {
-            background-color: #565e64;
-        }
-    }
+.secondary {
+    @include button-styles(#6c757d, #565e64)
+}
 
-    &.complete {
-        background: none;
-        color: #0056b3;
+.complete {
+    @include button-styles(none, none, #007BFF);
+    color: #007BFF;
+
+    &:hover {
+        color: #0056b3
     }
 }
